@@ -1,0 +1,44 @@
+{
+    "title": "Benjamin Brkic | benyamynbrkyc",
+    "name": "benyamynbrkc",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon server.js"
+    },
+    "description": "The Official Website of benyamynbrkyc",
+    "keywords": [
+        "css",
+        "sass",
+        "html",
+        "responsive",
+        "theme",
+        "template",
+        "portfolio",
+        "official",
+        "personal"
+    ],
+    "license": "MIT",
+    "author": "Benjamin Brkic | benyamynbrkyc",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "dependencies": {
+        "bootstrap": "4.5.0",
+        "express": "^4.17.1",
+        "jquery": "3.5.1",
+        "nodemon": "^2.0.4"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.26.12",
+        "del": "5.1.0",
+        "gulp": "4.0.2",
+        "gulp-autoprefixer": "7.0.1",
+        "gulp-clean-css": "4.3.0",
+        "gulp-header": "2.0.9",
+        "gulp-plumber": "^1.2.1",
+        "gulp-rename": "2.0.0",
+        "gulp-sass": "4.1.0",
+        "merge-stream": "2.0.0"
+    }
+}
