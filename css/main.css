@@ -40,13 +40,13 @@ html {
 }
 @font-face {
   font-family: 'SFProTextBold';
-  src: url('../fonts/SfProTextBold/SFProText-Bold.eot');
-  src: url('../fonts/SfProTextBold/SFProText-Bold.eot?#iefix')
+  src: url('../fonts/SFProTextBold/SFProText-Bold.eot');
+  src: url('../fonts/SFProTextBold/SFProText-Bold.eot?#iefix')
       format('embedded-opentype'),
-    url('../fonts/SfProTextBold/SFProText-Bold.woff2') format('woff2'),
-    url('../fonts/SfProTextBold/SFProText-Bold.woff') format('woff'),
-    url('../fonts/SfProTextBold/SFProText-Bold.ttf') format('truetype'),
-    url('../fonts/SfProTextBold/SFProText-Bold.svg') format('svg');
+    url('../fonts/SFProTextBold/SFProText-Bold.woff2') format('woff2'),
+    url('../fonts/SFProTextBold/SFProText-Bold.woff') format('woff'),
+    url('../fonts/SFProTextBold/SFProText-Bold.ttf') format('truetype'),
+    url('../fonts/SFProTextBold/SFProText-Bold.svg') format('svg');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
