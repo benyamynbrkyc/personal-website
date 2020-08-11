@@ -6,32 +6,15 @@ html {
 
 @font-face {
   font-family: 'SF Pro';
-  src: url('../fonts/SFPro/SF-Pro.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/SFPro/SF-Pro.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */ url('../fonts/SFPro/SF-Pro.otf') format('opentype'),
-    /* Open Type Font */ url('../fonts/SFPro/SF-Pro.svg') format('svg'),
-    /* Legacy iOS */ url('../fonts/SFPro/SF-Pro.ttf') format('truetype'),
-    /* Safari, Android, iOS */ url('../fonts/SFPro/SF-Pro.woff') format('woff'),
+  src:/* Legacy iOS */ url('../fonts/SFPro/SF-Pro.ttf') format('truetype'),
     /* Modern Browsers */ url('../fonts/SFPro/SF-Pro.woff2') format('woff2'); /* Modern Browsers */
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'SF Pro Ultralight';
-  src: url('../fonts/SFProUltralight/SF-Pro-Display-Ultralight.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/SFProUltralight/SF-Pro-Display-Ultralight.eot?#iefix')
-      format('embedded-opentype'),
-    /* IE6-IE8 */ url('../fonts/SFProUltralight/SF-Pro-Display-Ultralight.otf')
-      format('opentype'),
-    /* Open Type Font */
-      url('../fonts/SFProUltralight/SF-Pro-Display-Ultralight.svg')
-      format('svg'),
-    /* Legacy iOS */
-      url('../fonts/SFProUltralight/SF-Pro-Display-Ultralight.ttf')
+  src: url('../fonts/SFProUltralight/SF-Pro-Display-Ultralight.ttf')
       format('truetype'),
-    /* Safari, Android, iOS */
-      url('../fonts/SFProUltralight/SF-Pro-Display-Ultralight.woff')
-      format('woff'),
     /* Modern Browsers */
       url('../fonts/SFProUltralight/SF-Pro-Display-Ultralight.woff2')
       format('woff2'); /* Modern Browsers */
@@ -40,13 +23,9 @@ html {
 }
 @font-face {
   font-family: 'SFProTextBold';
-  src: url('../fonts/SFProTextBold/SFProText-Bold.eot');
-  src: url('../fonts/SFProTextBold/SFProText-Bold.eot?#iefix')
-      format('embedded-opentype'),
-    url('../fonts/SFProTextBold/SFProText-Bold.woff2') format('woff2'),
-    url('../fonts/SFProTextBold/SFProText-Bold.woff') format('woff'),
-    url('../fonts/SFProTextBold/SFProText-Bold.ttf') format('truetype'),
-    url('../fonts/SFProTextBold/SFProText-Bold.svg') format('svg');
+  src: url('../fonts/SFProTextBold/SFProText-Bold.woff2') format('woff2'),
+    url('../fonts/SFProTextBold/SFProText-Bold.ttf') format('truetype');
+
   font-weight: bold;
   font-style: normal;
   font-display: swap;
