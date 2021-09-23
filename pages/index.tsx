@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
+import Header from './components/Header';
 import Main from './components/Main';
 import ContentFill from './components/ContentFill';
 
@@ -35,17 +36,10 @@ const Home: NextPage = () => {
         />
       </Head>
 
+      <Header />
       <Main />
-      <ContentFill />
 
-      {/* <footer>
-        <a
-          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'>
-          Powered by{' '}
-        </a>
-      </footer> */}
+      <ContentFill />
     </div>
   );
 };
