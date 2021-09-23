@@ -20,7 +20,7 @@ function Main() {
       <motion.img
         animate={animateObject}
         src='https://cdn.shopify.com/s/files/1/1711/1231/products/Megayouput-5D-diy-diamond-painting-Cross-Stitch-Diamond-Embroidery-mosaic-pattern-Cute-penguin-picture-Cartoon-kids_1024x1024.jpg?v=1571609287'
-        alt='a cute little penguin'
+        alt='a cute little penguin, really cute'
         className='w-12 border-8 border-white rounded-full dark:border-black'
       />
     </motion.main>
