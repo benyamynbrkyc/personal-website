@@ -18,7 +18,7 @@ function Main() {
         <p>
           Hello, my name is Benjamin! 👋
           <br />
-          I'm a Full Stack Developer. <br /> Nice to meet you 😄
+          I&apos;m a Full Stack Developer. <br /> Nice to meet you 😄
         </p>
       </div>
       <motion.img
