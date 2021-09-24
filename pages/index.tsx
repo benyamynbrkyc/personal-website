@@ -9,7 +9,7 @@ import ContentFill from './components/ContentFill';
 
 const Home: NextPage = () => {
   return (
-    <div className='container mx-auto'>
+    <div className='w-3/4 mx-auto lg:1/4 pt-36'>
       <Head>
         <title>My app</title>
         <meta
@@ -39,7 +39,7 @@ const Home: NextPage = () => {
       <Header />
       <Main />
 
-      <ContentFill />
+      {/* <ContentFill /> */}
     </div>
   );
 };
