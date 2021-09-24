@@ -1,33 +1,52 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 function Main() {
   const [animateObject, setAnimateObject] = useState({});
+  const [visible, setVisible] = useState(false);
 
-  setInterval(() => {
-    setAnimateObject({ y: -10 });
-  }, 1300);
+  // setTimeout(() => {
+  //   setVisible(true);
+  // }, 1300);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setVisible(true);
+    }, 700);
+  }, []);
+
+  const variants = {
+    visible: { opacity: [0, 1], y: -10 },
+    hidden: { opacity: 0, y: 0 },
+  };
 
   return (
-    <motion.main
-      animate={{ scale: [0.75, 1], y: -30, rotate: [-15, 0] }}
-      transition={{ duration: 1, type: 'spring', damping: 4 }}
-      className='sticky max-w-sm text-base text-left md:top-12 top-6 md:text-xl'>
-      <br />
-      <div className='px-6 py-4 text-white bg-blue-600 shadow-lg rounded-2xl'>
-        <p>
-          Hello, my name is Benjamin! 👋
-          <br />
-          I&apos;m a Full Stack Developer. <br /> Nice to meet you 😄
-        </p>
-      </div>
-      <motion.img
-        animate={animateObject}
-        src='/profilePic.webp'
-        alt='a cute little penguin, really cute'
-        className='w-20 border-8 border-white rounded-full dark:border-black'
-      />
-    </motion.main>
+    <header className='mb-8'>
+      <motion.main
+        animate={{ scale: [0.85, 1.1, 1], y: [50, 0] }}
+        transition={{ duration: 1, type: 'spring', damping: 4 }}
+        className='sticky max-w-sm text-base text-left md:top-12 top-6 md:text-xl'>
+        <br />
+        <div className='px-6 py-4 text-white bg-blue-600 shadow-lg rounded-2xl animate__animated animate__fadeInUp'>
+          <p>
+            Hello, my name is Benjamin! 👋
+            <br />
+            I&apos;m a Full Stack Developer. <br /> Nice to meet you 😄
+          </p>
+        </div>
+      </motion.main>
+      <motion.div
+        animate={visible ? 'visible' : 'hidden'}
+        variants={variants}
+        transition={{ duration: 0.6, type: 'spring', damping: 6 }}
+        className='opacity-0'>
+        <img
+          src='/profilePic.webp'
+          className='w-20 border-8 border-white rounded-full shadow-lg dark:border-black'
+          alt='My profile picture'
+        />
+      </motion.div>
+    </header>
   );
 }
 
