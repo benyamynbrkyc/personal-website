@@ -2,12 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 function Main() {
-  const [animateObject, setAnimateObject] = useState({});
   const [visible, setVisible] = useState(false);
-
-  // setTimeout(() => {
-  //   setVisible(true);
-  // }, 1300);
 
   useEffect(() => {
     setTimeout(() => {
@@ -21,13 +16,13 @@ function Main() {
   };
 
   return (
-    <header className='mb-8'>
+    <header>
       <motion.main
         animate={{ scale: [0.85, 1.1, 1], y: [50, 0] }}
         transition={{ duration: 1, type: 'spring', damping: 4 }}
         className='sticky max-w-sm text-base text-left md:top-12 top-6 md:text-xl'>
         <br />
-        <div className='px-6 py-4 text-white bg-blue-600 shadow-lg rounded-2xl animate__animated animate__fadeInUp'>
+        <div className='px-6 py-4 text-white bg-blue-600 shadow-xl rounded-2xl animate__animated animate__fadeInUp'>
           <p>
             Hello, my name is Benjamin! 👋
             <br />
