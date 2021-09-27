@@ -28,7 +28,7 @@ function ContactButton({ type }) {
       href={href}
       rel='noreferrer'
       target='_blank'
-      className='flex flex-row items-center justify-start w-full h-auto p-4 bg-white border-2 shadow-md dark:text-gray-300 dark:shadow-none dark:border-gray-800 dark:bg-black rounded-2xl md:w-72 dark:hover:border-blue-800 hover:shadow-lg hover:border-gray-400'>
+      className='flex flex-row items-center justify-start w-full h-auto p-4 bg-white border-2 shadow-md dark:text-gray-300 dark:shadow-none dark:border-gray-800 dark:bg-black rounded-2xl md:w-72 md:dark:hover:border-blue-700 hover:shadow-lg md:hover:border-gray-400'>
       <div className='pr-4 border-r-2'>
         <img
           className='invert-when-dark'
@@ -39,7 +39,7 @@ function ContactButton({ type }) {
         />
       </div>
       <div className='flex items-center justify-center w-full '>
-        <p>{displayText}</p>
+        <h1>{displayText}</h1>
         <div className='ml-2'>
           <img
             className='invert-when-dark'

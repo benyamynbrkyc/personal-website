@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-import Image from 'next/image';
-
 function Main() {
   const [visible, setVisible] = useState(false);
 
@@ -18,18 +16,18 @@ function Main() {
   };
 
   return (
-    <motion.header whileHover={{ scale: 1.1, x: 50 }}>
+    <motion.header className='max-w-sm' whileHover={{ scale: 1.1, x: 30 }}>
       <motion.main
         animate={{ scale: [0.85, 1.1, 1], y: [50, 0] }}
         transition={{ duration: 1, type: 'spring', damping: 4 }}
         className='sticky max-w-sm text-base text-left md:top-12 top-6 md:text-xl'>
         <br />
         <div className='px-6 py-4 text-white shadow-xl bg-gradient-to-b from-blue-500 to-blue-600 rounded-2xl animate__animated animate__fadeInUp'>
-          <p>
+          <h1>
             Hello, my name is Benjamin! 👋
             <br />
             I&apos;m a Full Stack Developer. <br /> Nice to meet you 😄
-          </p>
+          </h1>
         </div>
       </motion.main>
       <motion.div
