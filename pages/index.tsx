@@ -9,7 +9,6 @@ const Home: NextPage = () => {
     <div>
       <Head />
       <div className='w-3/4 pt-20 mx-auto lg:1/4 md:pt-28'>
-        {/* <Head /> */}
         <Header />
         <Main />
       </div>
