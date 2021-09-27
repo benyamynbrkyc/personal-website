@@ -6,9 +6,13 @@ import Spacer from '../UI/Spacer';
 function Main() {
   return (
     <div className='animate__animated animate__fadeInUp animate__delay-1s'>
-      <h1>Contact</h1>
       <Spacer />
-      <ContactButton></ContactButton>
+      <ContactButton type='email'></ContactButton>
+      <Spacer size='sm' />
+
+      <ContactButton type='linkedin'></ContactButton>
+      <Spacer size='sm' />
+      <ContactButton type='github'></ContactButton>
     </div>
   );
 }
