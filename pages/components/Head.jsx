@@ -9,10 +9,7 @@ function HeadTag() {
         name='description'
         content='Hello there, I am Benjamin, a full-stack web developer 👋. I strive to deliver the best possible digital products using the latest industry standards.'
       />
-      <link
-        rel='icon'
-        href='https://img.icons8.com/ios-glyphs/30/000000/globe-earth--v1.png'
-      />
+      <link rel='icon' type='image/x-icon' href='/favicon.ico' />
 
       <link rel='canonical' href='http://www.benjaminbrkic.com/' />
       <meta name='robots' content='index, follow' />

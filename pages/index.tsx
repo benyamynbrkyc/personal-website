@@ -6,10 +6,13 @@ import Main from './components/Main';
 
 const Home: NextPage = () => {
   return (
-    <div className='w-3/4 pt-20 mx-auto lg:1/4 md:pt-28'>
+    <div>
       <Head />
-      <Header />
-      <Main />
+      <div className='w-3/4 pt-20 mx-auto lg:1/4 md:pt-28'>
+        {/* <Head /> */}
+        <Header />
+        <Main />
+      </div>
     </div>
   );
 };
