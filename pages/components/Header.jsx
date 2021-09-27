@@ -18,7 +18,7 @@ function Main() {
   };
 
   return (
-    <header>
+    <motion.header whileHover={{ scale: 1.1, x: 50 }}>
       <motion.main
         animate={{ scale: [0.85, 1.1, 1], y: [50, 0] }}
         transition={{ duration: 1, type: 'spring', damping: 4 }}
@@ -43,7 +43,7 @@ function Main() {
           alt='My profile picture'
         />
       </motion.div>
-    </header>
+    </motion.header>
   );
 }
 

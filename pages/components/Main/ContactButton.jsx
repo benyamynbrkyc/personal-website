@@ -1,45 +1,26 @@
-import Image from 'next/image';
-import { useEffect, useState } from 'react';
-
 function ContactButton({ type }) {
-  const [mode, setMode] = useState('light');
-
   let href = '';
   let displayText = '';
   let icon = '/icons/';
   let iconAlt = '';
-  let external = false;
-
-  useEffect(() => {
-    window
-      .matchMedia('(prefers-color-scheme: dark)')
-      .addEventListener('change', (e) => {
-        // e.matches - dark if true, light if false
-        if (e.matches) {
-          setMode('dark');
-        } else {
-          setMode('light');
-        }
-      });
-  }, []);
+  let email = false;
 
   if (type === 'email') {
     href = 'mailto:benjamin.brkic@gmail.com';
     displayText = 'Email';
-    icon += `mail-outline${mode == 'dark' ? '-light' : ''}.webp`;
+    icon += `mail-outline.webp`;
     iconAlt = 'Email Icon';
+    email = true;
   } else if (type === 'linkedin') {
     href = 'https://www.linkedin.com/in/benjamin-brkić-4727111b4/';
     displayText = 'LinkedIn';
     icon += 'logo-linkedin.webp';
     iconAlt = 'LinkedIn Icon';
-    external = true;
   } else if (type === 'github') {
     href = 'https://github.com/benyamynbrkyc';
     displayText = 'GitHub';
     icon += 'logo-github.webp';
     iconAlt = 'GitHub Icon';
-    external = true;
   }
 
   return (
@@ -47,22 +28,29 @@ function ContactButton({ type }) {
       href={href}
       rel='noreferrer'
       target='_blank'
-      className='flex flex-row items-center justify-start w-full h-auto p-4 bg-white border shadow-md rounded-2xl md:w-72'>
+      className='flex flex-row items-center justify-start w-full h-auto p-4 bg-white border-2 shadow-md dark:text-gray-300 dark:shadow-none dark:border-gray-800 dark:bg-black rounded-2xl md:w-72 dark:hover:border-blue-800 hover:shadow-lg hover:border-gray-400'>
       <div className='pr-4 border-r-2'>
-        <Image src={icon} alt={iconAlt} width='30' height='30' />
+        <img
+          className='invert-when-dark'
+          src={icon}
+          alt={iconAlt}
+          width='30'
+          height='30'
+        />
       </div>
-      <div className='flex justify-center w-full'>
+      <div className='flex items-center justify-center w-full '>
         <p>{displayText}</p>
-        {external && (
-          <div className='ml-2'>
-            <Image
-              src={`/icons/open-outline${mode == 'dark' ? '-light' : ''}.webp`}
-              width='20'
-              height='20'
-              alt='External link icon'
-            />
-          </div>
-        )}
+        <div className='ml-2'>
+          <img
+            className='invert-when-dark'
+            src={
+              !email ? '/icons/open-outline.webp' : '/icons/send-outline.webp'
+            }
+            width='20'
+            height='20'
+            alt='External link icon'
+          />
+        </div>
       </div>
     </a>
   );
