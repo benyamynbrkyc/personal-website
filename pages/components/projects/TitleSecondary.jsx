@@ -1,6 +1,6 @@
 import Spacer from '../UI/Spacer';
 
-export default function TitleMedium({ children }) {
+export default function TitleSecondary({ children }) {
   return (
     <>
       <h1 className='text-xl title'>{children}</h1>
