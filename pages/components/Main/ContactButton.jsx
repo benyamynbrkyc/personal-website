@@ -1,7 +1,7 @@
 function ContactButton({ type }) {
   let href = '';
   let displayText = '';
-  let icon = '/icons/';
+  let icon = 'images/icons/';
   let iconAlt = '';
   let email = false;
 
@@ -44,7 +44,9 @@ function ContactButton({ type }) {
           <img
             className='invert-when-dark'
             src={
-              !email ? '/icons/open-outline.webp' : '/icons/send-outline.webp'
+              !email
+                ? 'images/icons/open-outline.webp'
+                : 'images/icons/send-outline.webp'
             }
             width='20'
             height='20'
