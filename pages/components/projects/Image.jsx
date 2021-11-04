@@ -5,6 +5,8 @@ import { ExternalLinkIcon } from '@heroicons/react/outline';
 export default function ImageComponent({ src }) {
   return (
     <div className='flex flex-col my-4'>
+      {JSON.stringify(process.env.NEXT_HOST_URL + src)}
+
       <div className='w-full mb-2 overflow-y-auto border border-gray-200 hide-scrollbar dark:border-gray-800 h-96 rounded-xl'>
         <div className='relative w-full h-screen'>
           <Image
