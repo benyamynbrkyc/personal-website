@@ -18,6 +18,7 @@ export default function ImageComponent({ src }) {
 
       <a
         target='_blank'
+        rel='noreferrer'
         href={process.env.NEXT_HOST_URL + src}
         className='flex items-center justify-center gap-2 text-xs'>
         <span>Otvori sliku u novoj kartici</span>

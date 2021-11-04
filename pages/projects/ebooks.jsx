@@ -10,13 +10,13 @@ export default function ebooks() {
       <br />
       <List>
         <li>
-          "Testna knjiga" je primjer korišten tokom razvoja aplikacije, radi
-          populacije rezultata.
+          &quot;Testna knjiga&quot; je primjer korišten tokom razvoja
+          aplikacije, radi populacije rezultata.
         </li>
         <br />
         <li>
-          Klikom na "Otvori sliku u novoj kartici" možete pregledati sliku u
-          punoj veličini.
+          Klikom na &quot;Otvori sliku u novoj kartici&quot; možete pregledati
+          sliku u punoj veličini.
         </li>
       </List>
       <br />
@@ -37,9 +37,9 @@ export default function ebooks() {
       <br />
       <TitleSecondary>Shopping cart</TitleSecondary>
       <p>
-        „Izračunaj dostavu" - ovu opciju moramo konfigurisati, s obzirom da ne
-        znam kakav je vaš model isporuke itd kao primjer sam stavio da je to
-        total + 5€.
+        &quot;Izračunaj dostavu&quot; - ovu opciju moramo konfigurisati, s
+        obzirom da ne znam kakav je vaš model isporuke itd kao primjer sam
+        stavio da je to total + 5€.
       </p>
       <Image src='/images/projects/ebooks/cart.png' />
       <br />
