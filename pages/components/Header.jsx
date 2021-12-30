@@ -24,7 +24,7 @@ function Main() {
         <br />
         <div className='px-6 py-4 text-white shadow-xl bg-gradient-to-b from-blue-500 to-blue-600 rounded-2xl animate__animated animate__fadeInUp'>
           <h1>
-            Hello, my name is Benjamin! 👋
+            Hi, my name is Benjamin! 👋
             <br />
             I&apos;m a Full Stack Developer. <br /> Nice to meet you 😄
           </h1>
