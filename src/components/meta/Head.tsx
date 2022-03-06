@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-function HeadTag() {
+export default function HeadTag() {
   return (
     <Head>
       <title>Benjamin Brkic | Freelance Full Stack Web Developer</title>
@@ -55,5 +55,3 @@ function HeadTag() {
     </Head>
   );
 }
-
-export default HeadTag;

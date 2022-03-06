@@ -1,4 +1,4 @@
-import Spacer from 'components/UI/Spacer';
+import Spacer from 'components/ui/Spacer';
 
 export default function TitleSecondary({
   children,

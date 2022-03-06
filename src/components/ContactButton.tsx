@@ -6,7 +6,7 @@ export enum ContactButtonEnum {
   Github = 'github',
 }
 
-function ContactButton({ type }: { type: ContactButtonEnum }) {
+export default function ContactButton({ type }: { type: ContactButtonEnum }) {
   let href = '';
   let displayText = '';
   let icon = '/images/icons/';
@@ -61,5 +61,3 @@ function ContactButton({ type }: { type: ContactButtonEnum }) {
     </a>
   );
 }
-
-export default ContactButton;

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-function Main() {
+export default function Chat() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -44,5 +44,3 @@ function Main() {
     </motion.header>
   );
 }
-
-export default Main;
