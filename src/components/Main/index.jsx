@@ -1,7 +1,7 @@
 import 'animate.css';
 
-import ContactButton from './ContactButton';
-import Spacer from '../UI/Spacer';
+import ContactButton from 'components/Main/ContactButton';
+import Spacer from 'components/UI/Spacer';
 
 function Main() {
   return (
