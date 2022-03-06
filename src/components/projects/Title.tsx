@@ -1,6 +1,6 @@
-import Spacer from '../UI/Spacer';
+import Spacer from 'components/UI/Spacer';
 
-export default function Title({ children }) {
+export default function Title({ children }: { children: JSX.Element }) {
   return (
     <>
       <h1 className='text-3xl border-b border-gray-200 dark:border-gray-800 title'>

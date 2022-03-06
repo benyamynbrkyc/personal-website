@@ -2,7 +2,11 @@ import Image from 'next/image';
 
 import { ExternalLinkIcon } from '@heroicons/react/outline';
 
-export default function ImageComponent({ src }) {
+type ImageSrc = {
+  src: string;
+};
+
+export default function ImageComponent({ src }: ImageSrc) {
   return (
     <div className='flex flex-col my-4'>
       <div className='w-full mb-2 overflow-y-auto border border-gray-200 hide-scrollbar dark:border-gray-800 h-96 rounded-xl'>

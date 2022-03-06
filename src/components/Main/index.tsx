@@ -3,20 +3,22 @@ import 'animate.css';
 import ContactButton from 'components/Main/ContactButton';
 import Spacer from 'components/UI/Spacer';
 
+import { ContactButtonEnum } from 'components/Main/ContactButton';
+
 function Main() {
   return (
     <div className='animate__animated animate__fadeInUp animate__delay-1s'>
       <Spacer />
 
-      <ContactButton type='email'></ContactButton>
+      <ContactButton type={ContactButtonEnum.Email} />
 
       <Spacer size='sm' />
 
-      <ContactButton type='linkedin'></ContactButton>
+      <ContactButton type={ContactButtonEnum.Linkedin} />
 
       <Spacer size='sm' />
 
-      <ContactButton type='github'></ContactButton>
+      <ContactButton type={ContactButtonEnum.Github} />
 
       <Spacer />
       <Spacer />
