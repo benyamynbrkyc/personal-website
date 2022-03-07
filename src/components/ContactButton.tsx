@@ -36,7 +36,7 @@ export default function ContactButton({ type }: { type: ContactButtonEnum }) {
       href={href}
       rel='noreferrer'
       target='_blank'
-      className='flex h-auto w-full max-w-xs flex-row items-center justify-start rounded-2xl border bg-white p-4 shadow transition-all dark:border-gray-800 dark:bg-black dark:text-gray-300 dark:shadow-none md:hover:scale-[1.02] md:hover:border-gray-400 md:dark:hover:border-blue-500'>
+      className='flex h-auto w-full max-w-xs flex-row items-center justify-start rounded-2xl border bg-white p-4 shadow transition-all dark:border-transparent dark:bg-gray-900 dark:text-gray-300 dark:shadow-none md:hover:scale-[1.02] md:hover:border-gray-400 '>
       <Image
         className='invert-when-dark'
         src={icon}
