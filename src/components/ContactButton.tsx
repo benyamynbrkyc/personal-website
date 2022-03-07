@@ -36,7 +36,7 @@ export default function ContactButton({ type }: { type: ContactButtonEnum }) {
       href={href}
       rel='noreferrer'
       target='_blank'
-      className='flex flex-row items-center justify-start w-full h-auto p-4 bg-white border shadow-md dark:text-gray-300 dark:shadow-none dark:border-gray-800 dark:bg-black rounded-2xl md:w-72 md:dark:hover:border-blue-700 hover:shadow-lg md:hover:border-gray-400'>
+      className='flex h-auto w-full max-w-xs flex-row items-center justify-start rounded-2xl border bg-white p-4 shadow transition-all dark:border-gray-800 dark:bg-black dark:text-gray-300 dark:shadow-none md:hover:scale-[1.02] md:hover:border-gray-400 md:dark:hover:border-blue-500'>
       <Image
         className='invert-when-dark'
         src={icon}
@@ -44,7 +44,7 @@ export default function ContactButton({ type }: { type: ContactButtonEnum }) {
         width={30}
         height={30}
       />
-      <span className='flex items-center justify-center w-full'>
+      <span className='flex w-full items-center justify-center'>
         <h1 className='mr-2'>{displayText}</h1>
         <img
           className='invert-when-dark'
