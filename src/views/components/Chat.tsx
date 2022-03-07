@@ -1,8 +1,16 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
+type HoverController = {
+  scale: number;
+  x: number;
+};
+
 export default function Chat() {
   const [visible, setVisible] = useState(false);
+  const [hoverController, setHoverController] = useState<
+    undefined | HoverController
+  >(undefined);
 
   useEffect(() => {
     setTimeout(() => {
@@ -15,8 +23,22 @@ export default function Chat() {
     hidden: { opacity: 0, y: 0 },
   };
 
+  const manageHover = () => {
+    if (window.innerWidth > 640)
+      setHoverController({
+        scale: 1.1,
+        x: 30,
+      });
+    else setHoverController(undefined);
+  };
+
+  useEffect(() => {
+    manageHover();
+    window.addEventListener('resize', () => manageHover());
+  }, []);
+
   return (
-    <motion.header className='max-w-sm' whileHover={{ scale: 1.1, x: 30 }}>
+    <motion.header className='max-w-sm' whileHover={hoverController}>
       <motion.main
         animate={{ scale: [0.85, 1.1, 1], y: [50, 0] }}
         transition={{ duration: 1, type: 'spring', damping: 4 }}
@@ -36,7 +58,7 @@ export default function Chat() {
         transition={{ duration: 0.6, type: 'spring', damping: 6 }}
         className='opacity-0'>
         <img
-          src='/profilePic.webp'
+          src='/images/profilePicSmall.webp'
           className='w-20 border-8 border-white rounded-full shadow-lg dark:border-black'
           alt='My profile picture'
         />
