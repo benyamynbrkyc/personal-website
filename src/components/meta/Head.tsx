@@ -33,7 +33,7 @@ export default function HeadTag() {
       <meta
         property='og:image'
         content={
-          'https://ik.imagekit.io/benyo/profile_pic_DdTEnzaiHU.jpg?updatedAt=1632772933637'
+          'https://ik.imagekit.io/benyo/profilePicSmall_xGywq2h7g?ik-sdk-version=javascript-1.4.3&updatedAt=1646611004683&tr=w-1200%2Ch-628%2Cfo-auto'
         }
       />
 
@@ -48,7 +48,7 @@ export default function HeadTag() {
       />
       <meta
         name='twitter:image'
-        content='https://ik.imagekit.io/benyo/profile_pic_DdTEnzaiHU.jpg?updatedAt=1632772933637'
+        content='https://ik.imagekit.io/benyo/profilePicSmall_xGywq2h7g?ik-sdk-version=javascript-1.4.3&updatedAt=1646611004683&tr=w-1200%2Ch-675%2Cfo-auto'
       />
       <meta name='twitter:site' content='@bnjmnbrkc' />
       <meta name='twitter:creator' content='@bnjmnbrkc' />
