@@ -4,7 +4,9 @@ export default function Layout({ children }: { children: JSX.Element }) {
   return (
     <>
       <Navbar />
-      <main>{children}</main>
+      <main className='lg:1/4 mx-auto w-3/4 pt-10 transition-all'>
+        {children}
+      </main>
     </>
   );
 }
