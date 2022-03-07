@@ -6,7 +6,7 @@ import { ContactButtonEnum } from 'components/ContactButton';
 
 export default function ContactSection() {
   return (
-    <div className='animate__animated animate__fadeInUp animate__delay-1s mt-10 flex flex-col gap-4'>
+    <div className='animate__animated animate__fadeInUp animate__delay-1s mt-10 flex flex-col items-center gap-4'>
       <ContactButton type={ContactButtonEnum.Email} />
       <ContactButton type={ContactButtonEnum.Linkedin} />
       <ContactButton type={ContactButtonEnum.Github} />

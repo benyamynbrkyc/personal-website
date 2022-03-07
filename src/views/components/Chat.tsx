@@ -38,13 +38,13 @@ export default function Chat() {
   }, []);
 
   return (
-    <motion.header className='max-w-sm' whileHover={hoverController}>
+    <motion.header className='mx-auto max-w-sm' whileHover={hoverController}>
       <motion.main
         animate={{ scale: [0.85, 1.1, 1], y: [50, 0] }}
         transition={{ duration: 1, type: 'spring', damping: 4 }}
-        className='sticky max-w-sm text-base text-left md:top-12 top-6 md:text-xl'>
+        className='sticky top-6 max-w-sm text-left text-base md:top-12 md:text-xl'>
         <br />
-        <div className='px-6 py-4 text-white shadow-xl bg-gradient-to-b from-blue-500 to-blue-600 rounded-2xl animate__animated animate__fadeInUp'>
+        <div className='animate__animated animate__fadeInUp rounded-2xl bg-gradient-to-b from-blue-500 to-blue-600 px-6 py-4 text-white shadow-xl'>
           <h1>
             Hi, my name is Benjamin! 👋
             <br />
@@ -59,7 +59,7 @@ export default function Chat() {
         className='opacity-0'>
         <img
           src='/images/profilePicSmall.webp'
-          className='w-20 border-8 border-white rounded-full shadow-lg dark:border-black'
+          className='w-20 rounded-full border-8 border-white shadow-lg dark:border-black'
           alt='My profile picture'
         />
       </motion.div>
