@@ -9,7 +9,7 @@ export default function Home() {
       <section className='lg:1/4 mx-auto w-3/4 pt-10 transition-all'>
         <Chat />
         <Main />
-        <p className='flex items-center gap-2 dark:text-white'>
+        <p className='mt-20 flex items-center gap-2 dark:text-white'>
           <img src='/images/icons/hammer-wrench.webp' height={20} width={20} />
           More coming soon...
         </p>
