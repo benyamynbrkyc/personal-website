@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Head />
-      <section className='w-3/4 pt-20 mx-auto lg:1/4 md:pt-28'>
+      <section className='lg:1/4 mx-auto w-3/4 pt-10 transition-all'>
         <Chat />
         <Main />
         <p className='flex items-center gap-2 dark:text-white'>
