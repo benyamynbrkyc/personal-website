@@ -9,7 +9,7 @@ export default function Work() {
           title='eBooks.ba'
           description='Lorem ipsum dolor sit amet.'
           imgUrl='/images/work/ebooks.png'
-          tags={['next.js', 'strapi']}
+          tags={[{ name: 'next.js' }, { name: 'strapi' }]}
         />
       </section>
     </div>
