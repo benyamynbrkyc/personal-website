@@ -25,6 +25,7 @@ export default function WorkCard({
     <article className='flex w-full max-w-2xl flex-col gap-2 rounded-2xl border p-6 text-black dark:border-transparent dark:bg-gray-900 dark:text-white'>
       <div className='relative mb-2 rounded-2xl'>
         <Image
+          priority={true}
           src={imgUrl}
           objectFit='cover'
           className='rounded'
