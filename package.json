@@ -10,12 +10,13 @@
     "export": "next export"
   },
   "dependencies": {
-    "@heroicons/react": "^1.0.5",
+    "@heroicons/react": "^1.0.6",
     "animate.css": "^4.1.1",
     "framer-motion": "^4.1.17",
     "next": "11.1.2",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.0",
