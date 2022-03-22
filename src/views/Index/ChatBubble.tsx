@@ -63,6 +63,7 @@ export default function ChatBubble() {
           height={80}
           width={80}
           alt='My profile picture'
+          priority={true}
           className='w-20 rounded-full border-8 border-white shadow-lg dark:border-black'
         />
       </motion.div>

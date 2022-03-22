@@ -16,6 +16,7 @@ export default function Home() {
           height={20}
           width={20}
           alt='Tool Emoji'
+          priority={true}
         />
         More coming soon...
       </p>

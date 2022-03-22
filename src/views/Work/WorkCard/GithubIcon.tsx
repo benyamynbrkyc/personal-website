@@ -6,6 +6,8 @@ export default function GithubIcon() {
       src='/images/github.svg'
       width={22}
       height={16}
+      alt='Github icon'
+      priority={true}
       className='invert-when-dark'
     />
   );
