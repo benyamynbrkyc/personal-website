@@ -27,10 +27,12 @@ export default function Work() {
           tags={[
             { name: 'Web Design', color: '#0983e5' },
             { name: 'Business', color: '#b6b6b6' },
+
           ]}
           liveUrl='https://www.exelent.net/'
           githubUrl='https://github.com/benyamynbrkyc/exelent'
         />
+        
       </section>
     </div>
   );
