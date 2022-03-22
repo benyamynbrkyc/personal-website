@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 type HoverController = {
   scale: number;
   x: number;
 };
 
-export default function Chat() {
+export default function ChatBubble() {
   const [visible, setVisible] = useState(false);
   const [hoverController, setHoverController] = useState<
     undefined | HoverController
@@ -44,7 +45,7 @@ export default function Chat() {
         transition={{ duration: 1, type: 'spring', damping: 4 }}
         className='sticky top-6 max-w-sm text-left text-base md:top-12 md:text-xl'>
         <br />
-        <div className='animate__animated animate__fadeInUp rounded-2xl bg-gradient-to-b from-blue-500 to-blue-600 px-6 py-4 text-white shadow-xl'>
+        <div className='animate__animated animate__fadeInUp rounded-2xl bg-gradient-to-b from-blue-500 to-blue-600 px-6 py-4 text-white'>
           <h1>
             Hi, my name is Benjamin! 👋
             <br />
@@ -56,11 +57,13 @@ export default function Chat() {
         animate={visible ? 'visible' : 'hidden'}
         variants={variants}
         transition={{ duration: 0.6, type: 'spring', damping: 6 }}
-        className='opacity-0'>
-        <img
+        className='border-6 flex w-20 items-center justify-center rounded-full border-white shadow-md dark:border-black'>
+        <Image
           src='/images/profilePicSmall.webp'
-          className='w-20 rounded-full border-8 border-white shadow-lg dark:border-black'
+          height={80}
+          width={80}
           alt='My profile picture'
+          className='w-20 rounded-full border-8 border-white shadow-lg dark:border-black'
         />
       </motion.div>
     </motion.header>

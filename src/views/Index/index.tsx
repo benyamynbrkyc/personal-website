@@ -1,15 +1,22 @@
+import Image from 'next/image';
+
 import Head from 'components/meta/Head';
-import Chat from 'views/Index/Chat';
+import ChatBubble from 'views/Index/ChatBubble';
 import ContactSection from 'views/Index/ContactSection';
 
 export default function Home() {
   return (
     <>
       <Head />
-      <Chat />
+      <ChatBubble />
       <ContactSection />
       <p className='mt-20 flex items-center justify-center gap-2 dark:text-white'>
-        <img src='/images/icons/hammer-wrench.webp' height={20} width={20} />
+        <Image
+          src='/images/icons/hammer-wrench.webp'
+          height={20}
+          width={20}
+          alt='Tool Emoji'
+        />
         More coming soon...
       </p>
     </>

@@ -1,8 +1,8 @@
 import 'animate.css';
 
-import ContactButton from 'components/ContactButton';
+import ContactButton from 'views/Index/components/ContactButton';
 
-import { ContactButtonEnum } from 'components/ContactButton';
+import { ContactButtonEnum } from 'views/Index/components/ContactButton';
 
 export default function ContactSection() {
   return (

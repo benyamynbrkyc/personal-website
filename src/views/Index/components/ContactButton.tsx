@@ -46,12 +46,12 @@ export default function ContactButton({ type }: { type: ContactButtonEnum }) {
       />
       <span className='flex w-full items-center justify-center'>
         <h1 className='mr-2'>{displayText}</h1>
-        <img
+        <Image
           className='invert-when-dark'
           src={
             !email
-              ? 'images/icons/open-outline.webp'
-              : 'images/icons/send-outline.webp'
+              ? '/images/icons/open-outline.webp'
+              : '/images/icons/send-outline.webp'
           }
           width='20'
           height='20'
