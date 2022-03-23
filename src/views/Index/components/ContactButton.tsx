@@ -20,7 +20,7 @@ export default function ContactButton({ type }: { type: ContactButtonEnum }) {
     iconAlt = 'Email Icon';
     email = true;
   } else if (type === 'linkedin') {
-    href = 'https://www.linkedin.com/in/benjamin-brkić-4727111b4/';
+    href = 'https://www.linkedin.com/in/benjaminbrkic';
     displayText = 'LinkedIn';
     icon += 'logo-linkedin.webp';
     iconAlt = 'LinkedIn Icon';
