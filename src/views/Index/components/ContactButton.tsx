@@ -14,7 +14,7 @@ export default function ContactButton({ type }: { type: ContactButtonEnum }) {
   let email = false;
 
   if (type === 'email') {
-    href = 'mailto:benjamin.brkic@gmail.com';
+    href = 'mailto:benjamin@benjaminbrkic.com';
     displayText = 'Email';
     icon += `mail-outline.webp`;
     iconAlt = 'Email Icon';
