@@ -15,8 +15,8 @@ export default function NavLink({ href, children }: IProps) {
 
   return (
     <li className='transition-all hover:text-blue-500'>
-      <Link href={href}>
-        <a className={`${isActive() && 'text-blue-500'}`}>{children}</a>
+      <Link href={href} className={`${isActive() && 'text-blue-500'}`}>
+        {children}
       </Link>
     </li>
   );
