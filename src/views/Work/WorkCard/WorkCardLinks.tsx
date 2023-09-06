@@ -14,6 +14,7 @@ export default function WorkCardLinks({ liveUrl, githubUrl }: IProps) {
           <a
             href={liveUrl}
             target='_blank'
+            rel='noreferrer'
             className='my-2 flex items-center gap-1 text-sm hover:underline'>
             <span>Website</span>
             <ExternalLinkIcon className='h-4 w-4' />
@@ -23,6 +24,7 @@ export default function WorkCardLinks({ liveUrl, githubUrl }: IProps) {
           <a
             href={githubUrl}
             target='_blank'
+            rel='noreferrer'
             className='my-2 flex items-center gap-1 text-sm hover:underline'>
             <span>GitHub</span>
             <GithubIcon />
