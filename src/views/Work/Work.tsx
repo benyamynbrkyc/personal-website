@@ -14,12 +14,27 @@ export default function Work() {
             description='Make predictions on esports matches for free and win awesome prizes every week.'
             imgUrl='/images/work/winpoint.webp'
             tags={[
+              { name: 'Predictions Platform', color: '#85cc37' },
+              { name: 'Virtual Item Exchange', color: '#dc292c' },
               { name: 'Next.js', color: '#0983e5' },
               { name: 'PayPal', color: '#0470b7' },
               { name: 'Tailwind', color: '#62BAF3' },
               { name: 'Internationalization/i18n', color: '#B1E457' },
             ]}
             liveUrl='https://www.winpoint.gg'
+          />
+          <WorkCard
+            key='Natron-Hayat'
+            title='Natron-Hayat'
+            description='Natron-Hayat is a fully integrated unbleached pulp and paper mill enjoying high reputation in the field of production of various types of paper and paper packaging.'
+            imgUrl='/images/work/natron-hayat.webp'
+            tags={[
+              { name: 'Next.js', color: '#0983e5' },
+              { name: 'PayPal', color: '#0470b7' },
+              { name: 'Tailwind', color: '#62BAF3' },
+              { name: 'Internationalization/i18n', color: '#B1E457' },
+            ]}
+            liveUrl='https://www.natron-hayat.ba'
           />
           <WorkCard
             key='eBooks.ba'
