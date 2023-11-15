@@ -7,7 +7,19 @@ export default function Work() {
       <Head />
       <div className='text-white'>
         <section className='flex flex-col items-center gap-12 pb-20'>
-          {/* todo: Fetch all this data from an api (an admin panel) */}
+          <WorkCard
+            key='ProFarm'
+            title='ProFarm'
+            description='Your ally in maintaining good health.'
+            imgUrl='/images/work/profarm.webp'
+            tags={[
+              { name: 'Pharmacy', color: '#85cc37' },
+              { name: 'Ecommerce', color: '#098061' },
+              { name: 'Next.js', color: '#0983e5' },
+              { name: 'Tailwind', color: '#62BAF3' },
+            ]}
+            liveUrl='https://web.profarm.ba'
+          />
           <WorkCard
             key='Winpoint'
             title='Winpoint'
@@ -36,7 +48,7 @@ export default function Work() {
             ]}
             liveUrl='https://www.natron-hayat.ba'
           />
-          <WorkCard
+          {/* <WorkCard
             key='eBooks.ba'
             title='eBooks.ba'
             description='Online platform for reading, buying and selling e-books.'
@@ -48,8 +60,8 @@ export default function Work() {
               { name: 'Ecommerce', color: '#098061' },
             ]}
             liveUrl='https://www.ebooks.ba'
-          />
-          <WorkCard
+          /> */}
+          {/* <WorkCard
             key='EXElent'
             title='EXElent'
             description='Software development firm showcase website'
@@ -59,7 +71,7 @@ export default function Work() {
               { name: 'Business', color: '#b6b6b6' },
             ]}
             liveUrl='https://www.exelent.net/'
-          />
+          /> */}
         </section>
       </div>
     </>
