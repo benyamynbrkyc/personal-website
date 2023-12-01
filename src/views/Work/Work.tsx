@@ -33,7 +33,6 @@ export default function Work() {
               { name: 'Tailwind', color: '#62BAF3' },
               { name: 'Internationalization/i18n', color: '#B1E457' },
             ]}
-            liveUrl='https://www.winpoint.gg'
           />
           <WorkCard
             key='Natron-Hayat'
