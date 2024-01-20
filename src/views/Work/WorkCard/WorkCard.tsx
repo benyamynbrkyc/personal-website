@@ -30,8 +30,7 @@ export default function WorkCard({
           height={720}
           alt={title}
           priority={true}
-          objectFit='cover'
-          className='rounded'
+          className='rounded object-cover'
         />
       </div>
       <h1 className='text-2xl font-bold'>{title}</h1>
