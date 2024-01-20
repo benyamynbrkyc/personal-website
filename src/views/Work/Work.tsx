@@ -47,6 +47,19 @@ export default function Work() {
             ]}
             liveUrl='https://www.natron-hayat.ba'
           />
+          <WorkCard
+            key='YA Dictum Factum Maglaj'
+            title='YA Dictum Factum Maglaj'
+            description='Fostering Creative Leadership: Uniting Communities and Empowering Youth.'
+            imgUrl='/images/work/ya-dictum-factum-maglaj.webp'
+            tags={[
+              { name: 'Next.js', color: '#0070f3' },
+              { name: 'Internationalization/i18n', color: '#B1E457' },
+              { name: 'SSR (Server-Side Rendering)', color: '#f44336' },
+              { name: 'CMS (Content Management System)', color: '#ff9800' },
+            ]}
+            liveUrl='https://dictumfactum.org'
+          />
           {/* <WorkCard
             key='eBooks.ba'
             title='eBooks.ba'
