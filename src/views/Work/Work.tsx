@@ -41,7 +41,6 @@ export default function Work() {
             imgUrl='/images/work/natron-hayat.webp'
             tags={[
               { name: 'Next.js', color: '#0983e5' },
-              { name: 'PayPal', color: '#0470b7' },
               { name: 'Tailwind', color: '#62BAF3' },
               { name: 'Internationalization/i18n', color: '#B1E457' },
             ]}
