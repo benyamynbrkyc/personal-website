@@ -10,7 +10,7 @@ export default function Work() {
           <WorkCard
             key='ProFarm'
             title='ProFarm'
-            description='Your ally in maintaining good health.'
+            description={`ProFarm Pharmacy's custom-tailored Ecommerce experience tightly integrated with a rich CMS.`}
             imgUrl='/images/work/profarm.webp'
             tags={[
               { name: 'Pharmacy', color: '#85cc37' },
@@ -19,6 +19,20 @@ export default function Work() {
               { name: 'Tailwind', color: '#62BAF3' },
             ]}
             liveUrl='https://web.profarm.ba'
+          />
+          <WorkCard
+            key='Primavera Estate Apartments'
+            title='Primavera Estate Apartments'
+            description={`Book your perfect stay in Pula through Primavera's custom online booking system.`}
+            imgUrl='/images/work/primavera-estate-apartments.webp'
+            tags={[
+              { name: 'Online Booking', color: '#85cc37' },
+              { name: 'Internationalization/i18n', color: '#ADDFFF' },
+              { name: 'Gallery', color: '#ff9800' },
+              { name: 'SEO', color: '#ff9800' },
+              { name: 'Next.js', color: '#0983e5' },
+            ]}
+            liveUrl='https://primaveraestate-apartments.com'
           />
           <WorkCard
             key='Winpoint'
@@ -31,7 +45,7 @@ export default function Work() {
               { name: 'Next.js', color: '#0983e5' },
               { name: 'PayPal', color: '#0470b7' },
               { name: 'Tailwind', color: '#62BAF3' },
-              { name: 'Internationalization/i18n', color: '#B1E457' },
+              { name: 'Internationalization/i18n', color: '#ADDFFF' },
             ]}
           />
           <WorkCard
@@ -42,7 +56,7 @@ export default function Work() {
             tags={[
               { name: 'Next.js', color: '#0983e5' },
               { name: 'Tailwind', color: '#62BAF3' },
-              { name: 'Internationalization/i18n', color: '#B1E457' },
+              { name: 'Internationalization/i18n', color: '#ADDFFF' },
             ]}
             liveUrl='https://www.natron-hayat.ba'
           />
@@ -53,7 +67,7 @@ export default function Work() {
             imgUrl='/images/work/ya-dictum-factum-maglaj.webp'
             tags={[
               { name: 'Next.js', color: '#0070f3' },
-              { name: 'Internationalization/i18n', color: '#B1E457' },
+              { name: 'Internationalization/i18n', color: '#ADDFFF' },
               { name: 'SSR (Server-Side Rendering)', color: '#f44336' },
               { name: 'CMS (Content Management System)', color: '#ff9800' },
             ]}
