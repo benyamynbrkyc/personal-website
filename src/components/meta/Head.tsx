@@ -3,15 +3,15 @@ import Head from 'next/head';
 export default function HeadTag() {
   return (
     <Head>
-      <title>Benjamin Brkic | Freelance Full Stack Web Developer</title>
+      <title>Benjamin Brkić | Full Stack Developer</title>
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       <meta
         name='description'
-        content='Hello there, I am Benjamin, a full-stack web developer 👋. I strive to deliver the best possible digital products using the latest industry standards.'
+        content='Benjamin Brkić is a full-stack developer building modern web and mobile products with TypeScript, React, Convex, Java, and Spring Boot.'
       />
       <link rel='icon' type='image/x-icon' href='/favicon.ico' />
 
-      <link rel='canonical' href='http://www.benjaminbrkic.com/' />
+      <link rel='canonical' href='https://benjaminbrkic.com/' />
       <meta name='robots' content='index, follow' />
       <meta name='twitter:card' content='summary' />
 
@@ -19,16 +19,16 @@ export default function HeadTag() {
       <meta property='og:type' content='website' />
       <meta
         property='og:title'
-        content='Benjamin Brkic 👨‍💻 | Freelance Full Stack Web Developer'
+        content='Benjamin Brkić | Full Stack Developer'
       />
       <meta
         property='og:description'
-        content='Hello there, I am Benjamin, a full-stack web developer 👋. I strive to deliver the best possible digital products using the latest industry standards.'
+        content='Full-stack developer building modern web and mobile products with TypeScript, React, Convex, Java, and Spring Boot.'
       />
-      <meta property='og:url' content='https://www.benjaminbrkic.com/' />
+      <meta property='og:url' content='https://benjaminbrkic.com/' />
       <meta
         property='og:site_name'
-        content='Benjamin Brkic 👨‍💻 | Freelance Full Stack Web Developer'
+        content='Benjamin Brkić | Full Stack Developer'
       />
       <meta
         property='og:image'
@@ -40,11 +40,11 @@ export default function HeadTag() {
       {/* Twitter Cards */}
       <meta
         name='twitter:title'
-        content='Benjamin Brkic 👨‍💻 | Freelance Full Stack Web Developer'
+        content='Benjamin Brkić | Full Stack Developer'
       />
       <meta
         name='twitter:description'
-        content='Hello there, I am Benjamin, a full-stack web developer 👋. I strive to deliver the best possible digital products using the latest industry standards.'
+        content='Full-stack developer building modern web and mobile products with TypeScript, React, Convex, Java, and Spring Boot.'
       />
       <meta
         name='twitter:image'

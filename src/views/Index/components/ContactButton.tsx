@@ -4,6 +4,7 @@ export enum ContactButtonEnum {
   Email = 'email',
   Linkedin = 'linkedin',
   Github = 'github',
+  CV = 'cv',
 }
 
 export default function ContactButton({ type }: { type: ContactButtonEnum }) {
@@ -29,6 +30,11 @@ export default function ContactButton({ type }: { type: ContactButtonEnum }) {
     displayText = 'GitHub';
     icon += 'logo-github.webp';
     iconAlt = 'GitHub Icon';
+  } else if (type === 'cv') {
+    href = '/work/benjamin-brkic-full-stack-developer-cv.pdf';
+    displayText = 'View CV';
+    icon += 'hammer-wrench.webp';
+    iconAlt = 'CV Icon';
   }
 
   return (
@@ -46,7 +52,7 @@ export default function ContactButton({ type }: { type: ContactButtonEnum }) {
         className='invert-when-dark'
       />
       <span className='flex w-full items-center justify-center'>
-        <h1 className='mr-2'>{displayText}</h1>
+        <span className='mr-2'>{displayText}</span>
         <Image
           className='invert-when-dark'
           src={

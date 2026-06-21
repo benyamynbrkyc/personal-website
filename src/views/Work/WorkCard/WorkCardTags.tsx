@@ -5,12 +5,12 @@ export type Tag = {
 
 export default function WorkTags({ tags }: { tags: Tag[] }) {
   return (
-    <div className='overflox mt-1 flex items-center gap-2 overflow-auto scrollbar-hide'>
+    <div className='mt-1 flex items-center gap-2 overflow-auto pb-1 scrollbar-hide'>
       {tags.map((tag) => (
         <i
-          style={{ backgroundColor: `${tag.color}32` || '#f3f4f632' }} // tailwind gray-100
+          style={{ backgroundColor: tag.color ? `${tag.color}32` : '#f3f4f632' }}
           key={tag.name}
-          className='rounded-full py-1 px-2 text-center whitespace-nowrap text-sm font-light italic'>
+          className='whitespace-nowrap rounded-full px-2 py-1 text-center text-sm font-light italic'>
           {tag.name}
         </i>
       ))}

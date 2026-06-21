@@ -13,9 +13,11 @@ export default function ChatBubble() {
   >(undefined);
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = window.setTimeout(() => {
       setVisible(true);
     }, 700);
+
+    return () => window.clearTimeout(timer);
   }, []);
 
   const variants = {
@@ -34,7 +36,9 @@ export default function ChatBubble() {
 
   useEffect(() => {
     manageHover();
-    window.addEventListener('resize', () => manageHover());
+    window.addEventListener('resize', manageHover);
+
+    return () => window.removeEventListener('resize', manageHover);
   }, []);
 
   return (
@@ -48,7 +52,8 @@ export default function ChatBubble() {
           <h1>
             Hi, my name is Benjamin! 👋
             <br />
-            I&apos;m a Full Stack Developer. <br /> Nice to meet you 😄
+            I&apos;m a full-stack developer building web, mobile, and real-time
+            products. <br /> Nice to meet you 😄
           </h1>
         </div>
       </motion.main>
