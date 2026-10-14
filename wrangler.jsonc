@@ -1,6 +1,7 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "personal-website",
+  "account_id": "ea43a078b00e5143e7d4983f8e8b0c4c",
   "compatibility_date": "2026-10-13",
   // Fully static site: no Worker script, Cloudflare serves the Astro build output.
   "assets": {
