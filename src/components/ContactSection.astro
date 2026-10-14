@@ -1,0 +1,72 @@
+---
+import { Image } from 'astro:assets';
+import MailIcon from '../assets/icons/mail-outline.svg';
+import LinkedinIcon from '../assets/icons/logo-linkedin.svg';
+import GithubIcon from '../assets/icons/logo-github.svg';
+import OpenIcon from '../assets/icons/open-outline.svg';
+import SendIcon from '../assets/icons/send-outline.svg';
+import hammerWrench from '../assets/images/hammer-wrench.webp';
+import { site } from '../data/site';
+
+const links = [
+  {
+    label: 'Email',
+    href: `mailto:${site.email}`,
+    icon: MailIcon,
+    actionIcon: SendIcon,
+  },
+  {
+    label: 'LinkedIn',
+    href: site.social.linkedin,
+    icon: LinkedinIcon,
+    actionIcon: OpenIcon,
+    rel: 'me noreferrer',
+  },
+  {
+    label: 'GitHub',
+    href: site.social.github,
+    icon: GithubIcon,
+    actionIcon: OpenIcon,
+    rel: 'me noreferrer',
+  },
+  {
+    label: 'View CV',
+    href: site.cvPath,
+    actionIcon: OpenIcon,
+  },
+];
+---
+
+<section
+  aria-labelledby='contact-heading'
+  class='mt-16 flex animate-fade-in-up flex-col items-center gap-4 pb-20 [animation-delay:1s]'>
+  <h2
+    id='contact-heading'
+    class='mb-2 text-sm font-medium tracking-widest text-blue-600 uppercase dark:text-blue-400'>
+    Get in touch
+  </h2>
+  {links.map(({ label, href, icon: Icon, actionIcon: ActionIcon, rel }) => (
+    <a
+      href={href}
+      target={href.startsWith('mailto:') ? undefined : '_blank'}
+      rel={rel}
+      class='flex w-full max-w-xs items-center rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition-all md:hover:scale-[1.02] md:hover:border-gray-400 dark:border-transparent dark:bg-gray-900 dark:text-gray-300 dark:shadow-none'>
+      {Icon ? (
+        <Icon width={30} height={30} aria-hidden='true' class='shrink-0' />
+      ) : (
+        <Image
+          src={hammerWrench}
+          alt=''
+          width={30}
+          height={30}
+          densities={[1, 2]}
+          class='shrink-0 dark:invert-80'
+        />
+      )}
+      <span class='flex w-full items-center justify-center gap-2'>
+        {label}
+        <ActionIcon width={20} height={20} aria-hidden='true' />
+      </span>
+    </a>
+  ))}
+</section>

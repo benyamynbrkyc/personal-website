@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import WorkCard from '../components/WorkCard.astro';
+import { projects } from '../data/projects';
+import { site } from '../data/site';
+import { baseGraph, projectList } from '../data/structured-data';
+
+const title = `Work | ${site.name}, ${site.jobTitle}`;
+const description =
+  'Selected work by Benjamin Brkić: full-stack products across real-time web platforms, local-first business software, cross-platform mobile, hospitality, ecommerce, and backend systems.';
+
+const { person, website } = await baseGraph(Astro.site!);
+const url = new URL('/work', Astro.site).href;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    person,
+    website,
+    {
+      '@type': 'CollectionPage',
+      '@id': `${url}#webpage`,
+      url,
+      name: title,
+      description,
+      inLanguage: 'en',
+      isPartOf: { '@id': website['@id'] },
+      about: { '@id': person['@id'] },
+      mainEntity: projectList(projects, Astro.site!),
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: new URL('/', Astro.site).href,
+        },
+        { '@type': 'ListItem', position: 2, name: 'Work', item: url },
+      ],
+    },
+  ],
+};
+---
+
+<Layout title={title} description={description} jsonLd={jsonLd}>
+  <header class='mb-12'>
+    <p class='mb-2 text-sm font-medium tracking-widest text-blue-600 uppercase dark:text-blue-400'>
+      Selected work
+    </p>
+    <h1 class='text-4xl font-bold tracking-tight'>Products and systems</h1>
+    <p class='mt-4 max-w-xl text-lg leading-8 text-gray-700 dark:text-gray-300'>
+      Full-stack products across real-time web platforms, local-first business
+      software, cross-platform mobile, hospitality, ecommerce, and event-driven
+      backend systems.
+    </p>
+  </header>
+
+  <section
+    aria-label='Projects'
+    class='flex flex-col items-center gap-12 pb-20'>
+    {projects.map((project) => (
+      <WorkCard {...project} />
+    ))}
+  </section>
+</Layout>
