@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "personal-website",
+  "compatibility_date": "2026-10-13",
+  // Fully static site: no Worker script, Cloudflare serves the Astro build output.
+  "assets": {
+    "directory": "./dist",
+    // `work.html` is served at `/work`, and `/work/` redirects to it.
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page",
+  },
+}

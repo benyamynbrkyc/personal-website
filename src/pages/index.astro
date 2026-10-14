@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ChatBubble from '../components/ChatBubble.astro';
+import ContactSection from '../components/ContactSection.astro';
+import { site } from '../data/site';
+import { baseGraph } from '../data/structured-data';
+
+const { person, website } = await baseGraph(Astro.site!);
+const url = new URL('/', Astro.site).href;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    person,
+    website,
+    {
+      '@type': 'ProfilePage',
+      '@id': `${url}#webpage`,
+      url,
+      name: site.title,
+      description: site.description,
+      inLanguage: 'en',
+      isPartOf: { '@id': website['@id'] },
+      mainEntity: { '@id': person['@id'] },
+    },
+  ],
+};
+---
+
+<Layout title={site.title} description={site.description} jsonLd={jsonLd}>
+  <ChatBubble />
+  <ContactSection />
+</Layout>

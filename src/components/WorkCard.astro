@@ -1,0 +1,68 @@
+---
+import { Picture } from 'astro:assets';
+import ExternalLinkIcon from '../assets/icons/external-link.svg';
+import GithubIcon from '../assets/icons/logo-github.svg';
+import type { Project } from '../data/projects';
+
+type Props = Project;
+
+const { title, description, highlights, image, tags, liveUrl, githubUrl } =
+  Astro.props;
+---
+
+<article class='flex w-full max-w-2xl flex-col gap-3 rounded-2xl border border-gray-200 p-6 text-black dark:border-transparent dark:bg-gray-900 dark:text-white'>
+  {image && (
+    <Picture
+      src={image}
+      alt={`${title} project preview`}
+      formats={['avif']}
+      fallbackFormat='webp'
+      widths={[400, 600, 900, 1200]}
+      sizes='(min-width: 672px) 590px, calc(100vw - 82px)'
+      pictureAttributes={{ class: 'mb-2 overflow-hidden rounded-2xl' }}
+      class='h-auto w-full rounded-sm object-cover'
+    />
+  )}
+  <h2 class='text-2xl font-bold'>{title}</h2>
+  <p class='leading-7 text-gray-700 dark:text-gray-300'>{description}</p>
+  <ul class='ml-5 list-disc space-y-1 text-sm leading-6 text-gray-600 dark:text-gray-400'>
+    {highlights.map((highlight) => (
+      <li>{highlight}</li>
+    ))}
+  </ul>
+  <ul
+    aria-label='Technologies'
+    class='mt-1 flex scrollbar-hide items-center gap-2 overflow-auto pb-1'>
+    {tags.map((tag) => (
+      <li
+        style={{ backgroundColor: `${tag.color ?? '#f3f4f6'}32` }}
+        class='rounded-full px-2 py-1 text-center text-sm font-light whitespace-nowrap italic'>
+        {tag.name}
+      </li>
+    ))}
+  </ul>
+  {(liveUrl || githubUrl) && (
+    <div class='my-1 flex items-center gap-4 text-sm'>
+      {liveUrl && (
+        <a
+          href={liveUrl}
+          target='_blank'
+          rel='noreferrer'
+          class='my-2 flex items-center gap-1 hover:underline'>
+          Website
+          <ExternalLinkIcon width={16} height={16} aria-hidden='true' />
+        </a>
+      )}
+      {githubUrl && (
+        <a
+          href={githubUrl}
+          target='_blank'
+          rel='noreferrer'
+          class='my-2 flex items-center gap-1 hover:underline'>
+          GitHub
+          <GithubIcon width={16} height={16} aria-hidden='true' />
+        </a>
+      )}
+    </div>
+  )}
+</article>
