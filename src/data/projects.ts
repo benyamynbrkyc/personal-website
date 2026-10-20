@@ -54,9 +54,9 @@ export const projects: Project[] = [
     description:
       'MagnetDev’s organization management SaaS: tasks, department hierarchies, messaging, leave, visitors and reporting in one real-time, role-based system. It began as a task manager for a municipal administration.',
     highlights: [
-      'Tasks in list, kanban, calendar and table views with custom statuses, dependencies, templates and four visibility levels',
-      'Department hierarchy, eight-role permission model, leave approvals, visitor register and CSV/PDF/XLSX reports',
-      'Installable app with push notifications, plus an agent-friendly CLI and API; Bosnian and English throughout',
+      'Tasks in list, kanban, calendar and table views with custom statuses, dependencies, templates and three visibility levels',
+      'Department hierarchy, six organization roles, leave approvals, visitor register and CSV/Excel reports',
+      'Installable app with push notifications, plus an agent-friendly CLI; Bosnian and English throughout',
     ],
     image: orgman,
     liveUrl: 'https://orgman.magnetdev.io',
