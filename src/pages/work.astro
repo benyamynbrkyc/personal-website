@@ -7,7 +7,7 @@ import { baseGraph, projectList } from '../data/structured-data';
 
 const title = `Work | ${site.name}, ${site.jobTitle}`;
 const description =
-  'Selected work by Benjamin Brkić: full-stack products across real-time web platforms, local-first business software, cross-platform mobile, hospitality, ecommerce, and backend systems.';
+  'Selected work by Benjamin Brkić: hotel platforms, a public price-comparison app, an organization SaaS, industrial and booking websites, and more — much of it delivered through MagnetDev.';
 
 const { person, website } = await baseGraph(Astro.site!);
 const url = new URL('/work', Astro.site).href;
@@ -54,6 +54,22 @@ const jsonLd = {
       Full-stack products across real-time web platforms, local-first business
       software, cross-platform mobile, hospitality, ecommerce, and event-driven
       backend systems.
+    </p>
+    <p class='mt-4 max-w-xl leading-7 text-gray-700 dark:text-gray-300'>
+      Client work marked <span class='font-medium'>MagnetDev</span> is delivered
+      through{' '}
+      <a
+        href='https://magnetdev.io'
+        target='_blank'
+        rel='noreferrer'
+        class='font-medium text-blue-600 hover:underline dark:text-blue-400'>MagnetDev</a>,
+      a software and hardware-integration studio from Maglaj. Full case studies
+      are on{' '}
+      <a
+        href='https://magnetdev.io/work'
+        target='_blank'
+        rel='noreferrer'
+        class='font-medium text-blue-600 hover:underline dark:text-blue-400'>magnetdev.io/work</a>.
     </p>
   </header>
 

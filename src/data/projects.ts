@@ -3,6 +3,14 @@ import type { ImageMetadata } from 'astro';
 import winpoint from '../assets/images/work/winpoint.webp';
 import profarm from '../assets/images/work/profarm.webp';
 import dictumFactum from '../assets/images/work/ya-dictum-factum-maglaj.webp';
+import hotelPresident from '../assets/images/work/hotel-president.png';
+import hotelStory from '../assets/images/work/hotel-story.png';
+import cjenogram from '../assets/images/work/cjenogram.png';
+import orgman from '../assets/images/work/orgman.webp';
+import natronHayat from '../assets/images/work/natron-hayat.png';
+import primavera from '../assets/images/work/primavera.png';
+
+const magnetdev = (slug: string) => `https://magnetdev.io/work/${slug}`;
 
 export type Tag = {
   name: string;
@@ -17,6 +25,8 @@ export type Project = {
   tags: Tag[];
   liveUrl?: string;
   githubUrl?: string;
+  /** Set for client work delivered through MagnetDev. */
+  caseStudyUrl?: string;
 };
 
 export const projects: Project[] = [
@@ -42,12 +52,15 @@ export const projects: Project[] = [
   {
     title: 'Orgman',
     description:
-      'A growing SaaS platform combining task workflows, department hierarchies, and role-based collaboration in a secure, real-time system.',
+      'MagnetDev’s organization management SaaS: tasks, department hierarchies, messaging, leave, visitors and reporting in one real-time, role-based system. It began as a task manager for a municipal administration.',
     highlights: [
-      'Organization-aware tasks with comments, attachments, favorites, subscriptions, statuses, types, and lists',
-      'Agent-friendly CLI access with JSON and Markdown output through Clerk authentication',
-      'Cloudflare deployment, rich text editing, SendGrid, PostHog, and automated test and code generation flows',
+      'Tasks in list, kanban, calendar and table views with custom statuses, dependencies, templates and four visibility levels',
+      'Department hierarchy, eight-role permission model, leave approvals, visitor register and CSV/PDF/XLSX reports',
+      'Installable app with push notifications, plus an agent-friendly CLI and API; Bosnian and English throughout',
     ],
+    image: orgman,
+    liveUrl: 'https://orgman.magnetdev.io',
+    caseStudyUrl: magnetdev('orgman'),
     tags: [
       { name: 'TypeScript', color: '#3178C6' },
       { name: 'React', color: '#149ECA' },
@@ -61,12 +74,15 @@ export const projects: Project[] = [
   {
     title: 'Hotel President & Spa',
     description:
-      'A complete hotel digitalization platform spanning room access, mobile applications, SPA access systems, TV portals, food ordering, and streaming integrations.',
+      'A connected platform for a 4-star hotel in Maglaj, built at MagnetDev: guest website, staff CMS, in-room Android TV app and housekeeping app on one on-premise API that talks to the door locks and the cash register.',
     highlights: [
-      'Guest and admin surfaces for rooms, reservations, check-in, access codes, restaurant menus, offers, and newsletters',
-      'Jantar access control, cash register services, and device/controller setup',
-      'Monri payment URLs, webhooks, status handling, and reservation payment state',
+      'Two-way Jantar integration: guest PINs and cards, automatic self check-in/out, remote unlock, heating before arrival, live cleaning/DND/SOS events',
+      'Cash-register sync for prices, menus and extras; reservations and in-room orders posted straight to the guest bill',
+      'Booking engine with child pricing, add-ons, coupons and Monri payments; staff timeline, live floor plan and roles',
     ],
+    image: hotelPresident,
+    liveUrl: 'https://hotelpresidentmaglaj.com',
+    caseStudyUrl: magnetdev('hotel-president'),
     tags: [
       { name: '.NET', color: '#512BD4' },
       { name: 'ASP.NET Core', color: '#512BD4' },
@@ -75,35 +91,82 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: 'Hotel Story Automation',
+    title: 'Hotel Story',
     description:
-      'A custom hotel software solution with digital TV portals, access control systems, mobile applications, and hotel service management.',
+      'Website and management backend for a new hotel and wedding venue in Žepče, built at MagnetDev on the same hotel platform as Hotel President.',
     highlights: [
-      'Room operations, guest workflows, access codes, and TV/admin endpoints',
-      'Device/controller setup, cash register services, and Monri payment flows',
-      'Mobile and digital TV portal surfaces for in-room services and hotel management',
+      'One-page site for rooms, restaurant, café, weddings and celebrations with galleries, video and direct Viber/WhatsApp contact',
+      'CMS-driven blog for news, offers and wedding stories',
+      'Hotel platform configured for Story: rooms, prices and reservations with cash-register sync',
     ],
+    image: hotelStory,
+    liveUrl: 'https://hotel-story.ba',
+    caseStudyUrl: magnetdev('hotel-story'),
     tags: [
-      { name: '.NET', color: '#512BD4' },
-      { name: 'ASP.NET Core', color: '#512BD4' },
+      { name: 'Next.js', color: '#0983E5' },
       { name: 'React', color: '#149ECA' },
-      { name: 'React Native', color: '#149ECA' },
+      { name: '.NET', color: '#512BD4' },
+      { name: 'MySQL', color: '#00758F' },
     ],
   },
   {
     title: 'Cjenogram',
     description:
-      'A cross-platform grocery price comparison platform developed with the Chamber of Economy of Zenica-Doboj Canton.',
+      'A public grocery and fuel price-comparison app built at MagnetDev for the Chamber of Economy of Zenica-Doboj Canton — live in the App Store, with Android in Google Play testing.',
     highlights: [
-      'Product scanning, cross-store price comparison, and shopping-list management',
-      'Mobile-first pnpm/Turbo monorepo with Convex backend and shared web/CMS surfaces',
-      'Real-time data, backend type checks, Convex tests, and explicit deployment workflows',
+      'Barcode scanning with GS1 lookup, price comparison across 16 retail and fuel chains, shopping lists and photo-backed price submissions',
+      'Moderation CMS for the chamber, with store administrators scoped to their own stores',
+      'Expo mobile apps, Convex backend with 564 tests, TanStack Start CMS and Astro site on Cloudflare Workers',
     ],
+    image: cjenogram,
+    liveUrl: 'https://cjenogram.ba',
+    caseStudyUrl: magnetdev('cjenogram'),
     tags: [
-      { name: 'React', color: '#149ECA' },
-      { name: 'Astro', color: '#FF5D01' },
       { name: 'React Native', color: '#149ECA' },
+      { name: 'Expo', color: '#4630EB' },
       { name: 'Convex', color: '#F35A3F' },
+      { name: 'TanStack Start', color: '#EF4444' },
+      { name: 'Astro', color: '#FF5D01' },
+    ],
+  },
+  {
+    title: 'Natron-Hayat',
+    description:
+      'Bilingual corporate website for Natron-Hayat, an integrated pulp and paper mill in Maglaj — product catalog, certificates, ecology reporting and careers.',
+    highlights: [
+      'Product catalog fed from the client’s CMS: 6 categories, 21 products with technical data sheets',
+      'Certificate and document library, six-tab ecology section, company timeline and announcements',
+      'Careers with CV upload and contact forms routed to six departments; maintained since 2023',
+    ],
+    image: natronHayat,
+    liveUrl: 'https://natron-hayat.ba',
+    caseStudyUrl: magnetdev('natron-hayat'),
+    tags: [
+      { name: 'Next.js', color: '#0983E5' },
+      { name: 'TypeScript', color: '#3178C6' },
+      { name: 'next-intl', color: '#60A5FA' },
+      { name: 'MDX', color: '#F9AC00' },
+      { name: 'Tailwind CSS', color: '#38BDF8' },
+    ],
+  },
+  {
+    title: 'Primavera Estate Apartments',
+    description:
+      'Commission-free direct-booking website and rental management panel for holiday apartments in Pula and Medulin, Croatia.',
+    highlights: [
+      'Search by dates and guests with live availability, stay totals and alternative date suggestions',
+      'Admin panel for apartments, seasonal pricing and reservations, including manual phone bookings',
+      'English, Croatian and German content with structured data, Turnstile and consent-mode ads tracking',
+    ],
+    image: primavera,
+    liveUrl: 'https://primaveraestate-apartments.com',
+    caseStudyUrl: magnetdev('primavera-apartments'),
+    tags: [
+      { name: 'Next.js', color: '#0983E5' },
+      { name: 'TypeScript', color: '#3178C6' },
+      { name: 'next-intl', color: '#60A5FA' },
+      { name: 'NextAuth', color: '#7C3AED' },
+      { name: 'TanStack Query', color: '#EF4444' },
     ],
   },
   {

@@ -24,6 +24,11 @@ export async function baseGraph(origin: URL) {
       url: home,
       image: new URL(profileImage.src, origin).href,
       sameAs: [site.social.linkedin, site.social.github],
+      worksFor: {
+        '@type': 'Organization',
+        name: 'MagnetDev',
+        url: 'https://magnetdev.io/',
+      },
       knowsAbout: site.knowsAbout,
     },
     website: {
@@ -53,6 +58,7 @@ export function projectList(projects: Project[], origin: URL) {
         keywords: project.tags.map((tag) => tag.name).join(', '),
         creator: { '@id': `${home}#person` },
         ...(project.liveUrl ? { url: project.liveUrl } : {}),
+        ...(project.caseStudyUrl ? { subjectOf: { '@type': 'WebPage', url: project.caseStudyUrl } } : {}),
       },
     })),
   };
